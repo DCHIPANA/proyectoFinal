@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>React</title>
+
+        <!--Importacion de los componentes de react-->
+        <script src="https://unpkg.com/react@17/umd/react.production.min.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+        <style>
+            .nombreTexto {
+                text-align: center;
+                color: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <div id='app'></div>
+        <script type="text/babel">
+            function Iterar()
+            {
+                return(
+                    <div>
+                        <App name='Alexander'/>
+                        <App name='Javier'/>
+                        <App name='Diego'/>
+                    </div>
+                );
+            }
+
+            function App(props)
+            {
+                return(
+                    <h1 className="nombreTexto">Hola , {props.name}</h1>
+                );
+            }
+            ReactDOM.render(<Iterar />,document.querySelector('#app'))
+        </script>
+    </body>
+</html>
